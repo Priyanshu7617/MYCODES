@@ -1,0 +1,35 @@
+// DELETION IN ARRAY---
+
+#include <iostream>
+using namespace std;
+
+void display(int arr[], int n)
+{
+    // for traversing the array---
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << endl;
+    }
+}
+
+void intDeletion(int arr[], int size, int index)
+{
+    // for deleting the array---
+
+    for (int i = index; i < size - 1; i++)
+    {
+        arr[i] = arr[i + 1];
+    }
+}
+int main()
+{
+    int arr[100] = {7, 8, 12, 27, 88};
+    display(arr, 5);
+    int size = 5, index = 3;
+    intDeletion(arr, size, index);
+    size -= 1;
+    cout << "The new array after deleting the element is : " << endl;
+    display(arr, size);
+    return 0;
+}
